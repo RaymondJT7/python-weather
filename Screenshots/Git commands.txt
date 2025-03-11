@@ -1,0 +1,5 @@
+source .venv/scripts/activate
+
+git status
+git add .
+git commit -m "Message goes here."
