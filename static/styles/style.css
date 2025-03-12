@@ -25,3 +25,10 @@ input, button {
     padding: 1rem;
     border-radius: 10px;
 }    
+
+#datetime {
+    color: rgb(0, 0, 0); 
+    font-size: 1.3rem;
+    margin: 0;
+    text-align: center;
+}

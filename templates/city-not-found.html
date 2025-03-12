@@ -9,12 +9,45 @@
 </head>
 
 <body>
+    <div id="datetime"></div>
    <h1>City Not Found</h1> 
    <h2>Try Again?</h2>
    <form action="/weather">
     <input type="text" name="city" id="city" placeholder="Enter a City"/>
     <button type="submit">Submit</button>
    </form>
+
+   <script>
+        // Function to update the current date and time
+        function updateDateTime() {
+            // Create a new Date object to get the current date and time
+            const now = new Date();
+            
+            // Define options for formatting the date to a more readable format
+            // This will display the full year, full month name, and numeric day
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            
+            // Convert the Date object to a localized string representation of the date
+            const date = now.toLocaleDateString(undefined, options);
+            
+            // Convert the Date object to a localized string representation of the time
+            const time = now.toLocaleTimeString();
+            
+            // Get the HTML element with the id 'datetime'
+            // Update its text content with the formatted date and time
+            document.getElementById('datetime').textContent = `${date} ${time}`;
+        }
+
+        // This function will be called when the page finishes loading
+        window.onload = function() {
+            // Call updateDateTime to set the initial date and time when the page loads
+            updateDateTime();
+            
+            // Set up an interval to call updateDateTime every second (1000 milliseconds)
+            // This ensures the displayed time is always up-to-date
+            setInterval(updateDateTime, 1000);
+        };
+   </script>
 </body>
 
 </html>
