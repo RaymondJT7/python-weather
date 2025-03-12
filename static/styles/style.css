@@ -20,7 +20,7 @@ body {
 }
 
 input, button {
-    width: 50%;
+    width: 100%;
     font-size: 2rem;
     padding: 1rem;
     border-radius: 10px;
